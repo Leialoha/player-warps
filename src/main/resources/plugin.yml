@@ -1,0 +1,21 @@
+name: PlayerWarps
+main: com.github.leialoha.playerwarps.PlayerWarps
+version: 1.0-SNAPSHOT
+api-version: 1.19
+
+author: Leialoha
+description: Allows players to create warps using signs
+website: github.com/Leialoha/PlayerWarps/
+prefix: Player Warps
+load: POSTWORLD
+depend: []
+softdepend: []
+loadBefore: []
+
+commands:
+  playerwarps:
+    description: The main command for Player Warps
+    aliases: [ pwarps, warps, pw ]
+    permission: playerwarps.command.playerwarps
+    permission-message: You do not have permission to use this command!
+    usage: "Usage: /playerwarps help"

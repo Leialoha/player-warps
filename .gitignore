@@ -1,0 +1,8 @@
+# Hide VS Code files
+.vscode
+
+# Hide MacOS files
+.DS_Store
+
+# Hide target files
+target
