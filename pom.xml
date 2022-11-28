@@ -7,7 +7,7 @@
 
 	<groupId>com.github.leialoha.playerwarps</groupId>
 	<artifactId>playerwarps</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.2</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,7 +44,7 @@
 		</dependency>
 		<!--This adds the Paper API artifact to the build -->
 		<dependency>
-		    <groupId>io.papermc.paper</groupId>
+			<groupId>io.papermc.paper</groupId>
 		    <artifactId>paper-api</artifactId>
 		    <version>1.19.2-R0.1-SNAPSHOT</version>
 		    <scope>provided</scope>

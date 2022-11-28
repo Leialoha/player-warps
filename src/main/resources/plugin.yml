@@ -1,6 +1,6 @@
 name: PlayerWarps
 main: com.github.leialoha.playerwarps.PlayerWarps
-version: 1.0-SNAPSHOT
+version: 1.0.1
 api-version: 1.19
 
 author: Leialoha
@@ -19,3 +19,83 @@ commands:
     permission: playerwarps.command.playerwarps
     permission-message: You do not have permission to use this command!
     usage: "Usage: /playerwarps help"
+  temp:
+    description: A temp command for Player Warps
+    permission: playerwarps.command.temp
+    permission-message: You do not have permission to use this command!
+    usage: "Usage: /temp"
+
+permissions:
+# Wild cards
+  playerwarps.*:
+    description: Gives access to all PlayerWarp actions
+    default: op
+    children:
+      playerwarps.command.*: true
+      playerwarps.warp.*: true
+  playerwarps.command.*:
+    description: Gives access to all PlayerWarp commands
+    default: op
+    children:
+      playerwarps.command.playerwarps: true
+      playerwarps.command.playerwarps.reload: true
+  playerwarps.warp.*:
+    description: Gives access to all PlayerWarp warp actions
+    default: op
+    children:
+      playerwarps.warp.create: true
+      playerwarps.warp.create.admin: true
+      playerwarps.warp.create.other: true
+      playerwarps.warp.use: true
+      playerwarps.warp.use.admin: true
+      playerwarps.warp.use.other: true
+      playerwarps.warp.remove: true
+      playerwarps.warp.remove.admin: true
+      playerwarps.warp.remove.other: true
+      playerwarps.warp.amount.unlimited: true
+
+# Commands
+  playerwarps.command.playerwarps:
+    description: Gives access to the /playerwarp command
+    default: true
+  playerwarps.command.playerwarps.reload:
+    description: Gives access to /playerwarp reload
+    default: op
+  playerwarps.command.playerwarps.gui:
+    description: Gives access to /playerwarp gui
+    default: true
+
+# Warps
+  playerwarps.warp.create:
+    description: Gives access to creating warps
+    default: true
+  playerwarps.warp.create.admin:
+    description: Gives access to creating admin warps
+    default: op
+  playerwarps.warp.create.other:
+    description: Gives access to creating warps for others
+    default: op
+  playerwarps.warp.use:
+    description: Gives access to use warps
+    default: true
+  playerwarps.warp.use.admin:
+    description: Gives access to use admin warps
+    default: op
+  playerwarps.warp.use.other:
+    description: Gives access to use private warps
+    default: op
+  playerwarps.warp.remove:
+    description: Gives access to removing warps
+    default: true
+  playerwarps.warp.remove.admin:
+    description: Gives access to removing admin warps
+    default: op
+  playerwarps.warp.remove.other:
+    description: Gives access to removing warps for others
+    default: op
+  playerwarps.warp.amount.unlimited:
+    description: Gives access to creating unlimited warps
+    default: op
+  playerwarps.warp.amount.1:
+    description: The default amount of warps for a player
+    default: true

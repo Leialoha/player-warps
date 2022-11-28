@@ -1,0 +1,26 @@
+lang: lang.yml
+gui:
+  compact: false
+  decor: true
+
+protection:
+  placement:
+    signs:
+      allowed-worlds:
+        - world
+      denied-worlds:
+        - world_nether
+        - world_the_end
+      # Prevents sign placement in specific worlds
+      # If toggled to true, it will only work in allowed-worlds
+      # If toggled to false, it will not work in denied-worlds
+      toggle: true
+    warps:
+      allowed-worlds:
+        - world
+      denied-worlds:
+        - world_nether
+        - world_the_end
+      toggle: true
+  explosions: true
+  suffocation: true
